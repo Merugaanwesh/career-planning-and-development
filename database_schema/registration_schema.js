@@ -15,6 +15,7 @@ let registration_schema = new mongoose.Schema({
     "Password":{
         type:String,
         
+        
     },
     "Contact_number":{
         type:Number,
@@ -47,6 +48,9 @@ let registration_schema = new mongoose.Schema({
     "Notice_period":{
         type:String,
     }
+    },
+    "session_token":{
+        type:String
     }
 })
 
