@@ -7,5 +7,8 @@ const mongoose = require("mongoose")
 const mongooseurl = "mongodb://localhost:27017/JSA"
 mongoose.connect(mongooseurl)
 const registration_schema = require("./database_schema/registration_schema")
+const recruiter_registration = require("./database_schema/recruiter_registration")
+const employer_router = require("./registration_login_logot/employer_router")
 app.use("/Registration_login_logout",router)
+app.use("/recruiter",employer_router)
 app.listen(3000,console.log("server is runing"))
