@@ -15,7 +15,6 @@ job_description_router.post("/job_description",async (req,res)=>{
     else{
      
          let login_checking = await recruiter_registration.find({"session_token":req.body.session_token , "Email_id": req.body.Email_id})
-         console.log(login_checking); 
          if(login_checking != 0){
             let date_insert = new posted_jobs(req.body)
             date_insert.save().then(response=>{

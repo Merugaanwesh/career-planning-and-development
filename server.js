@@ -11,7 +11,10 @@ const recruiter_registration = require("./database_schema/recruiter_registration
 const employer_router = require("./registration_login_logot/employer_router")
 const posted_jobs =require("./Recruitment_platform/Schema/posted_jobs")
 const job_description_router = require("./Recruitment_platform/Job_description_router")
+const search_a_jobs = require("./job seeker platform/search_a_jobs") 
 app.use("/Registration_login_logout",router)
 app.use("/recruiter",employer_router)
 app.use("/description",job_description_router)
+app.use("/search",search_a_jobs)
+
 app.listen(3000,console.log("server is runing"))
