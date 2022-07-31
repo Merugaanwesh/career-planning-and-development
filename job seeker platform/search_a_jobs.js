@@ -8,7 +8,7 @@ search_a_jobs.post("/search", async (req,res)=>{
     let registration = await registration_schema.find({"session_token":req.body.session_token , "Email_id":req.body.Email_id})
      if(registration != 0){
         let Filter_job_title = await posted_jobs.find({job_title:{$regex:(req.body.job_title), $options :"i" }})
-         let Filter_lo = await posted_jobs.find({Location:{$regex:(req.body.Location), $options :"i" }})
+         
 
        let Filter_Location = req.body.Location
        let Filter=[]
